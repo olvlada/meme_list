@@ -1,0 +1,655 @@
+@font-face {
+  font-family: 'country';
+  src:  url('../fonts/country.eot?ki435y');
+  src:  url('../fonts/country.eot?ki435y#iefix') format('embedded-opentype'),
+    url('../fonts/country.ttf?ki435y') format('truetype'),
+    url('../fonts/country.woff?ki435y') format('woff'),
+    url('../fonts/country.svg?ki435y#country') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* US, UK, CA, AU ,KR-, JP, FR, DR-, MX, ES, AR, BR, PT, MZ, AO, CO, VE, CZ, PE */
+
+[class^="country-icon-"], [class*=" country-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'country' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 28px;
+  margin: 3px 0 5px 0;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.country-icon-Portugal .path1:before,
+.country-icon-PT .path1:before {
+  content: "\e900";
+  color: rgb(109, 165, 68);
+}
+.country-icon-Portugal .path2:before,
+.country-icon-PT .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-Portugal .path3:before,
+.country-icon-PT .path3:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-Portugal .path4:before,
+.country-icon-PT .path4:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-Portugal .path5:before,
+.country-icon-PT .path5:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-japan .path1:before,
+.country-icon-JP .path1:before {
+  content: "\e905";
+  color: rgb(240, 240, 240);
+}
+.country-icon-japan .path2:before,
+.country-icon-JP .path2:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-spain .path1:before,
+.country-icon-ES .path1:before {
+  content: "\e907";
+  color: rgb(255, 218, 68);
+}
+.country-icon-spain .path2:before,
+.country-icon-ES .path2:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-spain .path3:before,
+.country-icon-ES .path3:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-mexico .path1:before,
+.country-icon-MX .path1:before {
+  content: "\e90a";
+  color: rgb(240, 240, 240);
+}
+.country-icon-mexico .path2:before,
+.country-icon-MX .path2:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-mexico .path3:before,
+.country-icon-MX .path3:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(109, 165, 68);
+}
+.country-icon-mexico .path4:before,
+.country-icon-MX .path4:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(109, 165, 68);
+}
+.country-icon-mexico .path5:before,
+.country-icon-MX .path5:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(255, 152, 17);
+}
+.country-icon-argentina .path1:before,
+.country-icon-AR .path1:before {
+  content: "\aea";
+  color: rgb(240, 240, 240);
+}
+.country-icon-argentina .path2:before,
+.country-icon-AR .path2:before {
+  content: "\aeb";
+  margin-left: -1em;
+  color: rgb(51, 138, 243);
+}
+.country-icon-argentina .path3:before,
+.country-icon-AR .path3:before {
+  content: "\aec";
+  margin-left: -1em;
+  color: rgb(51, 138, 243);
+}
+.country-icon-argentina .path4:before,
+.country-icon-AR .path4:before {
+  content: "\aed";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-france .path1:before,
+.country-icon-FR .path1:before {
+  content: "\e913";
+  color: rgb(240, 240, 240);
+}
+.country-icon-france .path2:before,
+.country-icon-FR .path2:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-france .path3:before,
+.country-icon-FR .path3:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-peru .path1:before,
+.country-icon-PE .path1:before {
+  content: "\e916";
+  color: rgb(240, 240, 240);
+}
+.country-icon-peru .path2:before,
+.country-icon-PE .path2:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-peru .path3:before,
+.country-icon-PE .path3:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-venezuela .path1:before,
+.country-icon-VE .path1:before {
+  content: "\e919";
+  color: rgb(0, 82, 180);
+}
+.country-icon-venezuela .path2:before,
+.country-icon-VE .path2:before {
+  content: "\e91a";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-venezuela .path3:before,
+.country-icon-VE .path3:before {
+  content: "\e91b";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-venezuela .path4:before,
+.country-icon-VE .path4:before {
+  content: "\e91c";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-venezuela .path5:before,
+.country-icon-VE .path5:before {
+  content: "\e91d";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-venezuela .path6:before,
+.country-icon-VE .path6:before {
+  content: "\e91e";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-venezuela .path7:before,
+.country-icon-VE .path7:before {
+  content: "\e91f";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-venezuela .path8:before,
+.country-icon-VE .path8:before {
+  content: "\e920";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-venezuela .path9:before,
+.country-icon-VE .path9:before {
+  content: "\e921";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-venezuela .path10:before,
+.country-icon-VE .path10:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-venezuela .path11:before,
+.country-icon-VE .path11:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-colombia .path1:before,
+.country-icon-CO .path1:before {
+  content: "\e924";
+  color: rgb(255, 218, 68);
+}
+.country-icon-colombia .path2:before,
+.country-icon-CO .path2:before {
+  content: "\e925";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-colombia .path3:before,
+.country-icon-CO .path3:before {
+  content: "\e926";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-angola .path1:before,
+.country-icon-AO .path1:before {
+  content: "\e927";
+  color: rgb(216, 0, 39);
+}
+.country-icon-angola .path2:before,
+.country-icon-AO .path2:before {
+  content: "\e928";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.country-icon-angola .path3:before,
+.country-icon-AO .path3:before {
+  content: "\e929";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-angola .path4:before,
+.country-icon-AO .path4:before {
+  content: "\e92a";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-angola .path5:before,
+.country-icon-AO .path5:before {
+  content: "\e92b";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-mozambique .path1:before,
+.country-icon-MZ .path1:before {
+  content: "\e92c";
+  color: rgb(240, 240, 240);
+}
+.country-icon-mozambique .path2:before,
+.country-icon-MZ .path2:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-mozambique .path3:before,
+.country-icon-MZ .path3:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(73, 110, 45);
+}
+.country-icon-mozambique .path4:before,
+.country-icon-MZ .path4:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.country-icon-mozambique .path5:before,
+.country-icon-MZ .path5:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(162, 0, 29);
+}
+.country-icon-mozambique .path6:before,
+.country-icon-MZ .path6:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-mozambique .path7:before,
+.country-icon-MZ .path7:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-mozambique .path8:before,
+.country-icon-MZ .path8:before{
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.country-icon-czech-republic .path1:before,
+.country-icon-CZ .path1:before {
+  content: "\e934";
+  color: rgb(240, 240, 240);
+}
+.country-icon-czech-republic .path2:before,
+.country-icon-CZ .path2:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-czech-republic .path3:before,
+.country-icon-CZ .path3:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-panama .path1:before {
+  content: "\e937";
+  color: rgb(240, 240, 240);
+}
+.country-icon-panama .path2:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-panama .path3:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-panama .path4:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-panama .path5:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-states .path1:before,
+.country-icon-US .path1:before {
+  content: "\e93c";
+  color: rgb(240, 240, 240);
+}
+.country-icon-united-states .path2:before,
+.country-icon-US .path2:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-states .path3:before,
+.country-icon-US .path3:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-states .path4:before,
+.country-icon-US .path4:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-states .path5:before,
+.country-icon-US .path5:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-states .path6:before,
+.country-icon-US .path6:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-australia .path1:before,
+.country-icon-AU .path1:before {
+  content: "\e942";
+  color: rgb(0, 82, 180);
+}
+.country-icon-australia .path2:before,
+.country-icon-AU .path2:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-australia .path3:before,
+.country-icon-AU .path3:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-australia .path4:before,
+.country-icon-AU .path4:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-australia .path5:before,
+.country-icon-AU .path5:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-australia .path6:before,
+.country-icon-AU .path6:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-australia .path7:before,
+.country-icon-AU .path7:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-australia .path8:before,
+.country-icon-AU .path8:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-australia .path9:before,
+.country-icon-AU .path9:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-australia .path10:before,
+.country-icon-AU .path10:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-australia .path11:before,
+.country-icon-AU .path11:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-australia .path12:before,
+.country-icon-AU .path12:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-brazil .path1:before,
+.country-icon-BR .path1:before {
+  content: "\e94e";
+  color: rgb(109, 165, 68);
+}
+.country-icon-brazil .path2:before,
+.country-icon-BR .path2:before {
+  content: "\e94f";
+  margin-left: -1em;
+  color: rgb(255, 218, 68);
+}
+.country-icon-brazil .path3:before,
+.country-icon-BR .path3:before {
+  content: "\e950";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-brazil .path4:before,
+.country-icon-BR .path4:before {
+  content: "\e951";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-brazil .path5:before,
+.country-icon-BR .path5:before {
+  content: "\e952";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-canada .path1:before,
+.country-icon-CA .path1:before {
+  content: "\e953";
+  color: rgb(240, 240, 240);
+}
+.country-icon-canada .path2:before,
+.country-icon-CA .path2:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-canada .path3:before,
+.country-icon-CA .path3:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-canada .path4:before,
+.country-icon-CA .path4:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-india .path1:before {
+  content: "\e957";
+  color: rgb(240, 240, 240);
+}
+.country-icon-india .path2:before {
+  content: "\e958";
+  margin-left: -1em;
+  color: rgb(255, 152, 17);
+}
+.country-icon-india .path3:before {
+  content: "\e959";
+  margin-left: -1em;
+  color: rgb(109, 165, 68);
+}
+.country-icon-india .path4:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-india .path5:before {
+  content: "\e95b";
+  margin-left: -1em;
+  color: rgb(240, 240, 240);
+}
+.country-icon-india .path6:before {
+  content: "\e95c";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path1:before,
+.country-icon-UK .path1:before {
+  content: "\e95d";
+  color: rgb(240, 240, 240);
+}
+.country-icon-united-kingdom .path2:before,
+.country-icon-UK .path2:before {
+  content: "\e95e";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path3:before,
+.country-icon-UK .path3:before {
+  content: "\e95f";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path4:before,
+.country-icon-UK .path4:before {
+  content: "\e960";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path5:before,
+.country-icon-UK .path5:before {
+  content: "\e961";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path6:before,
+.country-icon-UK .path6:before {
+  content: "\e962";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path7:before,
+.country-icon-UK .path7:before {
+  content: "\e963";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path8:before,
+.country-icon-UK .path8:before {
+  content: "\e964";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path9:before,
+.country-icon-UK .path9:before {
+  content: "\e965";
+  margin-left: -1em;
+  color: rgb(0, 82, 180);
+}
+.country-icon-united-kingdom .path10:before,
+.country-icon-UK .path10:before {
+  content: "\e966";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-kingdom .path11:before,
+.country-icon-UK .path11:before {
+  content: "\e967";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-kingdom .path12:before,
+.country-icon-UK .path12:before {
+  content: "\e968";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-kingdom .path13:before,
+.country-icon-UK .path13:before {
+  content: "\e969";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-united-kingdom .path14:before,
+.country-icon-UK .path14:before {
+  content: "\e96a";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}
+.country-icon-germany .path1:before {
+  content: "\e96b";
+  color: rgb(255, 218, 68);
+}
+.country-icon-germany .path2:before {
+  content: "\e96c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.country-icon-germany .path3:before {
+  content: "\e96d";
+  margin-left: -1em;
+  color: rgb(216, 0, 39);
+}

@@ -1,0 +1,189 @@
+/** BoosterNextFY **/
+@font-face {
+    font-family: 'BoosterNextFY Black';
+    src: url('../fonts/booster/BoosterNextFY-Black.otf');
+}
+
+@font-face {
+    font-family: 'BoosterNextFY Bold';
+    src: url('../fonts/booster/BoosterNextFY-Bold.otf');
+    src: url('../fonts/booster/boosternextfy-bold-webfont.eot');
+    src: url('../fonts/booster/boosternextfy-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/booster/boosternextfy-bold-webfont.woff2') format('woff2'),
+         url('../fonts/booster/boosternextfy-bold-webfont.woff') format('woff'),
+         url('../fonts/booster/boosternextfy-bold-webfont.ttf') format('truetype'),
+         url('../fonts/booster/boosternextfy-bold-webfont.svg#booster_next_fybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BoosterNextFY Light';
+    src: url('../fonts/booster/BoosterNextFY-Light.otf');
+    src: url('../fonts/booster/boosternextfy-light-webfont.eot');
+    src: url('../fonts/booster/boosternextfy-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/booster/boosternextfy-light-webfont.woff2') format('woff2'),
+         url('../fonts/booster/boosternextfy-light-webfont.woff') format('woff'),
+         url('../fonts/booster/boosternextfy-light-webfont.ttf') format('truetype'),
+         url('../fonts/booster/boosternextfy-light-webfont.svg#booster_next_fylight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BoosterNextFY Medium';
+    src: url('../fonts/booster/BoosterNextFY-Medium.otf');
+    src: url('../fonts/booster/boosternextfy-medium-webfont.eot');
+    src: url('../fonts/booster/boosternextfy-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/booster/boosternextfy-medium-webfont.woff2') format('woff2'),
+         url('../fonts/booster/boosternextfy-medium-webfont.woff') format('woff'),
+         url('../fonts/booster/boosternextfy-medium-webfont.ttf') format('truetype'),
+         url('../fonts/booster/boosternextfy-medium-webfont.svg#booster_next_fymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BoosterNextFY Regular';
+    src: url('../fonts/booster/BoosterNextFY-Regular.otf');
+    src: url('../fonts/booster/boosternextfy-regular-webfont.eot');
+    src: url('../fonts/booster/boosternextfy-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/booster/boosternextfy-regular-webfont.woff2') format('woff2'),
+         url('../fonts/booster/boosternextfy-regular-webfont.woff') format('woff'),
+         url('../fonts/booster/boosternextfy-regular-webfont.ttf') format('truetype'),
+         url('../fonts/booster/boosternextfy-regular-webfont.svg#booster_next_fyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BoosterNextFY Thin';
+    src: url('../fonts/booster/BoosterNextFY-Thin.otf');
+    src: url('../fonts/booster/boosternextfy-thin-webfont.eot');
+    src: url('../fonts/booster/boosternextfy-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/booster/boosternextfy-thin-webfont.woff2') format('woff2'),
+         url('../fonts/booster/boosternextfy-thin-webfont.woff') format('woff'),
+         url('../fonts/booster/boosternextfy-thin-webfont.ttf') format('truetype'),
+         url('../fonts/booster/boosternextfy-thin-webfont.svg#booster_next_fythin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'BoosterNextFY Regular';
+    font-size: 14px;
+}
+.content {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1031px;
+    margin: 0 auto;
+    background-color: #fbfbfb;
+}
+.upload-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #dc2529;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.data-list-table {
+    width: 100%;
+}
+.data-list-table tr:nth-child(even) td {
+    background: #2a404b;
+}
+.data-list-table tr:nth-child(odd) td {
+    background: #03080e;
+}
+.data-list-table tr:nth-child(even) td.domain-cell {
+    background: #fcfcfc;
+    background: -moz-linear-gradient(left, #fcfcfc 0%, #5a6b73 100%);
+    background: -webkit-linear-gradient(left, #fcfcfc 0% ,#5a6b73 100%);
+    background: linear-gradient(to right, #fcfcfc 0% ,#5a6b73 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#5a6b73',GradientType=1);
+}
+.data-list-table tr:nth-child(odd) td.domain-cell {
+    background: #fcfcfc;
+    background: -moz-linear-gradient(left, #fcfcfc 0%, #32363b 100%);
+    background: -webkit-linear-gradient(left, #fcfcfc 0%, #32363b 100%);
+    background: linear-gradient(to right, #fcfcfc 0%, #32363b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#32363b',GradientType=1);
+}
+.data-list-table tr:nth-child(even) td.vertical-cell {
+    background: #fcfcfc;
+    background: -moz-linear-gradient(left, #5a6b73 0%, #2a404b 100%);
+    background: -webkit-linear-gradient(left, #5a6b73 0% ,#2a404b 100%);
+    background: linear-gradient(to right, #5a6b73 0% ,#2a404b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a6b73', endColorstr='#2a404b',GradientType=1);
+}
+.data-list-table tr:nth-child(odd) td.vertical-cell {
+    background: #fcfcfc;
+    background: -moz-linear-gradient(left, #32363b 0%, #03080e 100%);
+    background: -webkit-linear-gradient(left, #32363b 0%, #03080e 100%);
+    background: linear-gradient(to right, #32363b 0%, #03080e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#32363b', endColorstr='#03080e',GradientType=1);
+}
+.data-list-table th {
+    padding: 7px 0 5px 0;
+    color: #dc2529;
+    font-size: 14px;
+}
+.data-list-table tr:first-child {
+    background: #ffffff !important;
+    background-attachment:fixed;
+}
+.data-list-table td {
+    padding: 7px 10px 5px 10px;
+    border-right: 1px solid #718087;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 14px;
+}
+.data-list-table td:last-child {
+    border-right: none;
+}
+.data-list-table td.domain-cell {
+    width: 30%;
+    border-right: none;
+    text-align: center;
+    color: #000000;
+}
+.data-list-table td.vertical-cell,
+.data-list-table th.vertical-cell {
+    width: 17%;
+}
+.data-list-table td.vertical-cell {
+    padding-left: 20px;
+}
+.data-list-table td.platform-cell,
+.data-list-table th.platform-cell {
+    width: 12%;
+    text-align: center;
+}
+.data-list-table td.size-cell,
+.data-list-table th.size-cell {
+    width: 15%;
+    text-align: center;
+}
+.data-list-table td.country-cell,
+.data-list-table th.country-cell {
+    width: 25%;
+    text-align: center;
+}
+.contry-icon-block {
+    display: inline-block;
+    margin: 3px 7px 5px 0;
+}
+.data-list-table td.vertical-cell {
+    vertical-align: middle;
+}

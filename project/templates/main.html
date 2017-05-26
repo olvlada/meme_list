@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/country.css" %}">
+    <link rel="stylesheet" href="{% static "css/icon.css" %}">
+    <script src="{% static "js/libraries/angular.min.js" %}"></script>
+    <script src="{% static "js/libraries/ng-file-upload-all.min.js" %}"></script>
+    <script src="{% static "js/project/MainController.js" %}"></script>
+</head>
+<body>
+    {% verbatim %}
+    <div class="content">
+        <div ng-app="MemeList" ng-controller="MainController">
+            <span ngf-select="uploadFile()" ng-model="filesForUpload" class="upload-button">Upload File</span><br>
+            <table cellpadding="0" cellspacing="0" class="data-list-table">
+                <tr>
+                    <th class="domain-cell"></th>
+                    <th class="vertical-cell">Vertical</th>
+                    <th class="platform-cell">Device</th>
+                    <th class="size-cell">Size</th>
+                    <th>Countries</th>
+                </tr>
+                <tr ng-repeat="dataItem in dataList">
+                    <td class="domain-cell">
+                        <img ng-src="https://logo.clearbit.com/{{ dataItem.domain }}?size=50"><br>
+                        {{ dataItem.domain }}
+                    </td>
+                    <td class="vertical-cell">
+                        <span ng-repeat="vertical in dataItem.verticals">
+                            <span class="{{ getIconClass(vertical) }}"></span>
+                            {{ vertical }}{{ $last ? '' : ', ' }}
+                        </span>
+                    </td>
+                    <td class="platform-cell">
+                        <span ng-repeat="platform in dataItem.platforms"><span class="{{ getIconClass(platform) }}"></span></sapn>
+                    </td>
+                    <td class="size-cell">
+                        <span ng-repeat="size in dataItem.sizes">{{ size }}{{ $last ? '' : ' / ' }}</span>
+                    </td>
+                    <td class="country-cell">
+                        <span ng-repeat="geo in dataItem.geos" class="contry-icon-block"><span class="country-icon-{{ geo }}"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span></span></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    {% endverbatim %}
+</body>
+</html>
