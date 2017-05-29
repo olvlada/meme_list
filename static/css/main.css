@@ -86,9 +86,15 @@ body {
     margin: 0 auto;
     background-color: #fbfbfb;
 }
+.header-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
 .upload-button {
     display: inline-block;
-    margin: 10px;
+    margin: 10px 0 10px 10px;
     padding: 10px;
     background-color: #dc2529;
     color: #ffffff;
@@ -157,6 +163,7 @@ body {
     border-right: none;
     text-align: center;
     color: #000000;
+    cursor: pointer;
 }
 .data-list-table td.vertical-cell,
 .data-list-table th.vertical-cell {
@@ -186,4 +193,8 @@ body {
 }
 .data-list-table td.vertical-cell {
     vertical-align: middle;
+}
+.data-list-table td.domain-cell img {
+    max-width: 100%;
+    max-height: 50px;
 }
