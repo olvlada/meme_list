@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="http://127.0.0.1:8008/static/css/main.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8008/static/css/country.css">
+    <link rel="stylesheet" href="http://127.0.0.1:8008/static/css/icon.css">
+</head>
+<body>
+    <div class="content">
+        <div>
+            <img src="http://127.0.0.1:8008/static/images/header.png" class="header-image">
+            <table cellpadding="0" cellspacing="0" class="data-list-table">
+                <tr>
+                    <th class="domain-cell"></th>
+                    <th class="vertical-cell">Vertical</th>
+                    <th class="platform-cell">Device</th>
+                    <th class="size-cell">Size</th>
+                    <th>Countries</th>
+                </tr>
+                {% for data_item in data %}
+                <tr>
+                    <td class="domain-cell">
+                        <img src="https://logo.clearbit.com/{{ data_item.domain }}?size=50">
+                        <br>
+                        {{ data_item.domain }}
+                    </td>
+                    <td class="vertical-cell">
+                        {% for vertical in data_item.verticals %}
+                        <span>
+                            <span class="icon-{{ vertical.split|join:"-"|lower}}"></span>
+                            {{ vertical }}
+                        </span>
+                        {% endfor %}
+                    </td>
+                    <td class="platform-cell">
+                        {% for platform in data_item.platforms %}
+                        <span><span class="icon-{{ platform.split|join:"-"|lower}}"></span></sapn>
+                        {% endfor %}
+                    </td>
+                    <td class="size-cell">
+                        {{ data_item.sizes|join:" / " }}
+                    </td>
+                    <td class="country-cell">
+                        {% for geo in data_item.geos %}
+                        <span class="contry-icon-block"><span class="country-icon-{{ geo }}"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span></span></span>
+                        {% endfor %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

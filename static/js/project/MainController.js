@@ -1,6 +1,6 @@
 (function () {
-    angular.module('MemeList', ['ngFileUpload']).controller('MainController', ['$scope', 'Upload', MainController]);
-    function MainController($scope, Upload) {
+    angular.module('MemeList', ['ngFileUpload']).controller('MainController', ['$scope', '$http', 'Upload', MainController]);
+    function MainController($scope, $http, Upload) {
         $scope.filesForUpload = null;
         $scope.loading = false;
         $scope.dataList = [];
@@ -10,7 +10,6 @@
         $scope.changeDomainImage = changeDomainImage;
 
         function uploadFile() {
-            console.log($scope.filesForUpload);
             if (!$scope.filesForUpload) { return null; }
             Upload.upload({
                 url: 'api/upload_file',
@@ -19,11 +18,30 @@
             }).then(function(response) {
                 $scope.dataList = response.data.data;
             }).catch(function() {
-                console.log('!!! error');
+                console.log('Error');
             });
         }
 
         function exportToImage() {
+            $http.post(
+                '/api/export_to_jpg', 
+                $scope.dataList
+            ).then(
+                function(response) {
+                    var link = document.createElement('a');
+                    link.setAttribute('download', 'export.jpg');
+                    link.setAttribute('href', '/export_to_jpg/' + response.data.file_code);
+                    document.body.appendChild(link);
+                    link.click();
+                    link.parentNode.removeChild(link);
+                },
+                function(response) {
+                    console.log('Error');
+                }
+            );
+        }
+
+        function exportToImageOld() {
             $scope.loading = true;
             setTimeout(function() {
                 var element = document.querySelector('.content');
@@ -57,7 +75,5 @@
                 reader.readAsDataURL(files[0]);
             }
         }
-
-        $scope.test = 187;
     }
 })();
