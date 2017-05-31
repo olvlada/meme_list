@@ -188,7 +188,7 @@ body {
     text-align: center;
 }
 .contry-icon-block {
-    display: inline-block;
+    /* display: inline-block; */
     margin: 3px 7px 5px 0;
 }
 .data-list-table td.vertical-cell {
