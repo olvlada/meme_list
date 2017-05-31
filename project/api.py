@@ -29,6 +29,8 @@ class ExportToJpgView(APIView):
 
     def post(self, request, *args, **kwargs):
         result_data = json.loads(request.body)
+        for result_item in result_data:
+            result_item['custom_domain_image'] = result_item.get('customDomainImage', None)
         template = loader.get_template('export.html')
         context = Context({'data': result_data})
         file_code = random.randint(0, 999999999)
