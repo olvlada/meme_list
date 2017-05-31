@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='main.html')),
     url(r'^api/export_to_jpg$', api.ExportToJpgView.as_view()),
     url(r'^export_to_jpg/(?P<file_code>[0-9]+)$', views.export_to_jpg),
+    url(r'^api/export_icons$', api.ExportIcons.as_view()),
 ]

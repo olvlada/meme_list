@@ -37,3 +37,34 @@ class ExportToJpgView(APIView):
         file_path = 'tmp/{}.jpg'.format(file_code)
         imgkit.from_string(template.render(context), file_path)
         return Response({'file_code': file_code}, status=200)
+
+
+class ExportIcons(APIView):
+    permission_classes = (AllowAny,)
+
+    def get(self, request, *args, **kwargs):
+        code_list = ['US', 'UK', 'CA', 'AU', 'JP', 'FR', 'MX', 'ES', 'AR', 'BR', 'PT', 'MZ', 'AO', 'CO', 'VE', 'CZ', 'PE']
+        color_list = [
+            {'color': '#03080e', 'type': 'dark'},
+            {'color': '#2a404b', 'type': 'light'}
+        ]
+
+        for code in code_list:
+            for color in color_list:
+                template = loader.get_template('icon.html')
+                context = Context({'code': code, 'color': color['color']})
+                file_path = 'tmp/{}-{}.png'.format(code, color['type'])
+                imgkit.from_string(
+                    template.render(context),
+                    file_path, 
+                    options={
+                        'format': 'png',
+                        'crop-h': '29',
+                        'crop-w': '28',
+                        'crop-x': '0',
+                        'crop-y': '0',
+                        'quality': '100'
+                    }
+                )
+        
+        return Response({'test': 1}, status=200)
