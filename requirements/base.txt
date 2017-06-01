@@ -2,3 +2,4 @@ Django==1.8.4
 djangorestframework==3.2.3
 xlrd==0.9.4
 imgkit==0.1.1
+requests==2.17.3

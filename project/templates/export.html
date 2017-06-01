@@ -22,9 +22,11 @@
                 <tr>
                     <td class="domain-cell">
                         {% if data_item.custom_domain_image %}
-                            <img src="{{ data_item.custom_domain_image }}">
+                        <img src="{{ data_item.custom_domain_image }}">
                         {% else %}
-                            <img src="https://logo.clearbit.com/{{ data_item.domain }}?size=50">
+                        {% if data_item.show_site_image %}
+                        <img src="https://logo.clearbit.com/{{ data_item.domain }}?size=50">
+                        {% endif %}
                         {% endif %}
                         <br>
                         {{ data_item.domain }}
@@ -48,11 +50,11 @@
                     <td class="country-cell">
                         {% if forloop.counter0|divisibleby:2 %}
                         {% for geo in data_item.geos %}
-                        <img src="http://127.0.0.1:8008/static/images/flags/{{ geo }}-light.png"></span>
+                        <img src="http://127.0.0.1:8008/static/images/flags/{{ geo }}-light.png">
                         {% endfor %}
                         {% else %}
                         {% for geo in data_item.geos %}
-                        <img src="http://127.0.0.1:8008/static/images/flags/{{ geo }}-dark.png"></span>
+                        <img src="http://127.0.0.1:8008/static/images/flags/{{ geo }}-dark.png">
                         {% endfor %}
                         {% endif %}
                     </td>
