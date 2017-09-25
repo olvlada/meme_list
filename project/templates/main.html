@@ -10,13 +10,13 @@
     <script src="{% static "js/libraries/html2canvas.js" %}"></script>
     <script src="{% static "js/project/MainController.js" %}"></script>
 </head>
-<body>
+<body class="body">
     {% verbatim %}
     <div class="content">
-        <div ng-app="MemeList" ng-controller="MainController">
+        <div ng-app="MemeList" ng-controller="MainController" id="main-content">
             <div ng-hide="loading" class="controls">
                 <span ngf-select="uploadFile()" ng-model="filesForUpload" class="upload-button">Upload File</span>
-                <span ng-click="exportToImage()" class="upload-button">Export</span>
+                <a ng-click="exportToImage()" class="upload-button" target="_blank">Export</a>
             </div>
             <img src="/static/images/header.png" class="header-image">
             <table ng-if="dataList.length" cellpadding="0" cellspacing="0" class="data-list-table">
@@ -28,26 +28,47 @@
                     <th>Countries</th>
                 </tr>
                 <tr ng-repeat="dataItem in dataList">
-                    <td ngf-select="changeDomainImage($files, dataItem)" class="domain-cell">
+                    <td class="domain-cell">
+                      <div ngf-select="changeImage($files, 'customDomainImage', dataItem)"
+                           ngf-pattern="'image/*'"
+                           ngf-accept="'image/*'"
+                           class="domain-cell-select">
                         <img ng-if="!dataItem.customDomainImage" ng-src="https://logo.clearbit.com/{{ dataItem.domain }}?size=50">
                         <img ng-if="dataItem.customDomainImage" ng-src="{{ dataItem.customDomainImage }}">
                         <br>
                         {{ dataItem.domain }}
+                      </div>
                     </td>
                     <td class="vertical-cell">
-                        <span ng-repeat="vertical in dataItem.verticals">
-                            <span class="{{ getIconClass(vertical) }}"></span>
-                            {{ vertical }}{{ $last ? '' : ', ' }}
-                        </span>
+                        <div ng-repeat="vertical in dataItem.verticals"
+                           ngf-select="changeImage($files, 'customVerticalImage', vertical)"
+                           ngf-pattern="'image/*'"
+                           ngf-accept="'image/*'"
+                           class="vertical-cell-item">
+                          <span ng-if="!vertical.customVerticalImage" class="{{ getIconClass(vertical.name) }}"></span>
+                          <img ng-if="vertical.customVerticalImage" ng-src="{{ vertical.customVerticalImage }}" class="vertical-custom-img">
+                          <span>{{ vertical.name }}</span>
+                        </div>
                     </td>
                     <td class="platform-cell">
-                        <span ng-repeat="platform in dataItem.platforms"><span class="{{ getIconClass(platform) }}"></span></sapn>
+                        <span ng-repeat="platform in dataItem.platforms"><span class="{{ getIconClass(platform.name) }}"></span></span>
                     </td>
                     <td class="size-cell">
-                        <span ng-repeat="size in dataItem.sizes">{{ size }}{{ $last ? '' : ' / ' }}</span>
+                        <span ng-repeat="size in dataItem.sizes">{{ size.name }}{{ $last ? '' : ' / ' }}</span>
                     </td>
                     <td class="country-cell">
-                        <span ng-repeat="geo in dataItem.geos" class="contry-icon-block"><span class="country-icon-{{ geo }}"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span></span></span>
+                      <div>
+                        <span ng-repeat="geo in dataItem.geos"
+                            ngf-select="changeImage($files, 'customGeoImage', geo)"
+                            ngf-pattern="'image/*'"
+                            ngf-accept="'image/*'"
+                            class="contry-icon-block">
+                          <span ng-if="!geo.customGeoImage"
+                                class="country-icon-{{ geo.name }}">
+                            <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span></span>
+                          <img ng-if="geo.customGeoImage" ng-src="{{ geo.customGeoImage }}" class="geo-custom-img">
+                        </span>
+                      </div>
                     </td>
                 </tr>
             </table>

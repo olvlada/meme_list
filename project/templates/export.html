@@ -22,41 +22,59 @@
                 <tr>
                     <td class="domain-cell">
                         {% if data_item.custom_domain_image %}
-                        <img src="{{ data_item.custom_domain_image }}">
+                          <img src="{{ data_item.custom_domain_image }}" width="50px">
                         {% else %}
-                        {% if data_item.show_site_image %}
-                        <img src="https://logo.clearbit.com/{{ data_item.domain }}?size=50">
-                        {% endif %}
+                          {% if data_item.show_site_image %}
+                            <img src="https://logo.clearbit.com/{{ data_item.domain }}?size=50">
+                          {% endif %}
                         {% endif %}
                         <br>
                         {{ data_item.domain }}
                     </td>
                     <td class="vertical-cell">
                         {% for vertical in data_item.verticals %}
-                        <span>
-                            <span class="icon-{{ vertical.split|join:"-"|lower}}"></span>
-                            {{ vertical }}
-                        </span>
+                          <div class="vertical-cell-item">
+                            {%  if vertical.customVerticalImage %}
+                              <img src="{{ vertical.customVerticalImage }}" class="vertical-custom-img">
+                            {% else %}
+                              <span>
+                                  <span class="icon-{{ vertical.name.split|join:"-"|lower }}"></span>
+                              </span>
+                            {% endif %}
+                          {{ vertical.name }}
+                          </div>
                         {% endfor %}
                     </td>
                     <td class="platform-cell">
                         {% for platform in data_item.platforms %}
-                        <span><span class="icon-{{ platform.split|join:"-"|lower}}"></span></sapn>
+                          <span>
+                            <span class="icon-{{ platform.name.split|join:"-"|lower }}"></span>
+                          </span>
                         {% endfor %}
                     </td>
                     <td class="size-cell">
                         {{ data_item.sizes|join:" / " }}
                     </td>
                     <td class="country-cell">
+                      <div>
                         {% if forloop.counter0|divisibleby:2 %}
-                        {% for geo in data_item.geos %}
-                        <img src="http://127.0.0.1:8008/static/images/flags/{{ geo }}-light.png">
-                        {% endfor %}
+                          {% for geo in data_item.geos %}
+                            {% if geo.customGeoImage %}
+                              <img src="{{ geo.customGeoImage }}" class="geo-custom-img">
+                            {% else %}
+                              <img src="http://127.0.0.1:8008/static/images/flags/{{ geo.name }}-light.png">
+                            {% endif %}
+                          {% endfor %}
                         {% else %}
-                        {% for geo in data_item.geos %}
-                        <img src="http://127.0.0.1:8008/static/images/flags/{{ geo }}-dark.png">
-                        {% endfor %}
+                          {% for geo in data_item.geos %}
+                            {% if geo.customGeoImage %}
+                              <img src="{{ geo.customGeoImage }}" class="geo-custom-img">
+                            {% else %}
+                              <img src="http://127.0.0.1:8008/static/images/flags/{{ geo.name }}-dark.png">
+                            {% endif %}
+                          {% endfor %}
                         {% endif %}
+                      </div>
                     </td>
                 </tr>
                 {% endfor %}

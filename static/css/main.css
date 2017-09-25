@@ -163,14 +163,20 @@ body {
     border-right: none;
     text-align: center;
     color: #000000;
+}
+
+.domain-cell-select{
+    display: inline-block;
     cursor: pointer;
 }
+
 .data-list-table td.vertical-cell,
 .data-list-table th.vertical-cell {
     width: 17%;
 }
 .data-list-table td.vertical-cell {
     padding-left: 20px;
+    padding-top: 20px;
 }
 .data-list-table td.platform-cell,
 .data-list-table th.platform-cell {
@@ -190,11 +196,34 @@ body {
 .contry-icon-block {
     display: inline-block;
     margin: 3px 7px 5px 0;
+    vertical-align: middle;
+    cursor: pointer;
 }
+
 .data-list-table td.vertical-cell {
     vertical-align: middle;
 }
 .data-list-table td.domain-cell img {
     max-width: 100%;
     max-height: 50px;
+}
+
+.vertical-cell-item {
+    display: block;
+    max-height: 50px;
+    min-height: 35px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.vertical-custom-img {
+    max-width: 50px;
+    max-height: 50px;
+    vertical-align: middle;
+}
+
+.geo-custom-img {
+    height: 28px;
+    width: 28px;
+    border-radius: 14px;
 }

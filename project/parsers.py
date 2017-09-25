@@ -19,7 +19,7 @@ class RowParser(object):
         }
 
     def _parse_list(self, value, separator):
-        return [item.strip() for item in value.split(separator)]
+        return [{'name': item.strip()} for item in value.split(separator)]
 
 
 class FileParser(object):

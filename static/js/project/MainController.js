@@ -7,7 +7,7 @@
         $scope.uploadFile = uploadFile;
         $scope.getIconClass = getIconClass;
         $scope.exportToImage = exportToImage;
-        $scope.changeDomainImage = changeDomainImage;
+        $scope.changeImage = changeImage;
 
         function uploadFile() {
             if (!$scope.filesForUpload) { return null; }
@@ -65,13 +65,13 @@
             return 'icon-' + value.toLowerCase().split(' ').join('-');
         }
 
-        function changeDomainImage(files, dataItem) {
+        function changeImage(files, attr, dataItem) {
             if (files && files[0]) {
                 var reader = new FileReader();
                 reader.onload = function (e) {
-                    dataItem.customDomainImage = e.target.result;
+                    dataItem[attr] = e.target.result;
                     $scope.$applyAsync();
-                }
+                };
                 reader.readAsDataURL(files[0]);
             }
         }
