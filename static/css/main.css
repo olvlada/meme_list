@@ -216,6 +216,10 @@ body {
     cursor: pointer;
 }
 
+.vertical-cell-item span {
+    vertical-align: middle;
+}
+
 .vertical-custom-img {
     width: 24.5px;
     height: 24.5px;
