@@ -217,8 +217,8 @@ body {
 }
 
 .vertical-custom-img {
-    max-width: 50px;
-    max-height: 50px;
+    width: 24.5px;
+    height: 24.5px;
     vertical-align: middle;
 }
 
